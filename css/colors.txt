@@ -1,0 +1,22 @@
+#396cf0 //primery color
+
+#083EC6
+#1653EB
+#5F89F3
+#8AA9F5
+
+
+
+#FF8A25 //secondry color
+
+#FF7600
+#FFA151
+#FFBB81
+
+
+
+#FFDB25 //thety color
+#FFD500 
+#FFE251
+#FFEA81
+

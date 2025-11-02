@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | نرسیمد</title>
+
+    <!-- فایل CSS اصلی -->
+    <link rel="stylesheet" href="../css/light.css">
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <!-- فونت وزیر -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="light">
+
+    <header>
+        <h1 class="heding-one">تماس با ما</h1>
+    </header>
+
+    <main>
+        <div class="contact-section">
+
+            <!-- فرم تماس -->
+            <div class="form-container">
+                <h2 class="heding-two">در ارتباط با ما باشید</h2>
+                <p class="desc">
+                    اگر سوالی دربارهٔ دوره‌ها، همکاری‌ها یا پادکست‌های نرسیمد دارید، فرم زیر را پر کنید تا تیم پشتیبانی
+                    در کوتاه‌ترین زمان ممکن با شما تماس بگیرد.
+                </p>
+                <form class="contact-form" id="contact-form">
+                    <label for="name">نام کامل</label>
+                    <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
+
+                    <label for="email">ایمیل</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                    <label for="message">پیام شما</label>
+                    <textarea id="message" name="message" placeholder="متن پیام..." required></textarea>
+
+                    <button type="submit" class="contact-btn">ارسال پیام</button>
+                </form>
+                <div id="form-response"></div>
+            </div>
+
+            <!-- اطلاعات تماس -->
+            <div class="info-container">
+                <h2>راه‌های ارتباطی</h2>
+                <p><strong>آدرس:</strong> اصفهان، خیابان دانشگاه، ساختمان نرسیمد</p>
+                <p><strong>تلفن:</strong> ۰۳۱-XXXXXXX</p>
+                <p><strong>ایمیل:</strong> info@nersimed.ir</p>
+
+                <section class="map-box">
+                    <h2 class="text-center">نشانی ما</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.047254163168!2d51.66393037554341!3d32.62392069226376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fbc35d17de74a61%3A0x69a0e77a49079b57!2z2K_Yp9mG2K8g2KfZhNi02LHZiNix2KfZhyDYp9mE2YXZhtin2KjYsdmHINiq2YfYsdmI2YY!5e0!3m2!1sfa!2sir!4v1735293331102!5m2!1sfa!2sir"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- لینک های پایین صفحه -->
+    <div class="links">
+        <a href="../Pags/about.html" target="_blank" class="btn tonal">درباره ما</a>
+        <a href="../Pags/team.html" target="_blank" class="btn tonal">تیم ما</a>
+    </div>
+
+   <!-- Footer -->
+  <footer class="team-footer surface-container-high">
+    <p>© 2025 نرسیمد | آموزش و توسعه پزشکی</p>
+  </footer>
+
+
+</body>
+</html>
