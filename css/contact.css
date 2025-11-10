@@ -1,30 +1,5 @@
-:root {
-  --font-main: "Vazirmatn", sans-serif;
+@import url(./light.css);
 
-  --color-primary: #396CF0;
-  --color-primary-light: #5F89F3;
-  --color-primary-dark: #083EC6;
-  --color-on-primary: #FFFFFF;
-
-  --color-secondary: #FF8A25;
-  --color-secondary-light: #FFA151;
-  --color-secondary-dark: #FF7600;
-  --color-on-secondary: #FFFFFF;
-
-  --color-tertiary: #F4C900;
-  --color-tertiary-light: #FFE251;
-  --color-tertiary-dark: #FFD500;
-  --color-on-tertiary: #FFFFFF;
-
-  --color-background: #FAF8FF;
-  --color-on-background: #1A1B21;
-
-  --color-surface: #FFFFFF;
-  --color-on-surface: #1A1B21;
-
-  --shadow-color: rgba(0,0,0,0.08);
-  --border-radius: 12px;
-}
 
 * {
   box-sizing: border-box;
@@ -38,22 +13,6 @@ body {
   color: var(--color-on-background);
   line-height: 1.7;
   direction: rtl;
-}
-
-/* ==========================
-   Header
-=========================== */
-header {
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-  color: var(--color-on-primary);
-  text-align: center;
-  padding: 6rem 1rem 3rem;
-  box-shadow: 0 4px 15px var(--shadow-color);
-}
-
-header h1 {
-  font-size: 3rem;
-  font-weight: 700;
 }
 
 /* ==========================
@@ -195,36 +154,6 @@ main {
   box-shadow: 0 4px 12px var(--shadow-color);
 }
 
-/* ==========================
-   Footer Links
-=========================== */
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 3rem 0 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-/* Tonal Button (Container) */
-.btn.tonal {
-  background-color: var(--color-primary-container);
-  color: var(--color-on-primary-container);
-}
-
-.btn.tonal:hover {
-  background-color: var(--color-primary-light);
-  color: var(--color-on-primary);
-}
-
 /* =======================
    🧵 Footer
 ======================= */
@@ -254,10 +183,7 @@ main {
 }
 
 @media (max-width: 500px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-
+ 
   .form-container h2,
   .info-container h2 {
     font-size: 1.5rem;
@@ -271,185 +197,3 @@ main {
 }
 
 
-
-
-/* 
-<!--
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Vazirmatn";
-}
-
-body {
-  background-color: #eff1f3;
-  color: #333;
-  direction: rtl;
-}
-
-هدر
-header {
-  background-color: #fff;
-  padding: 20px 60px;
-  text-align: center;
-}
-
-header h1 {
-  color: #14529d;
-  font-size: 48px;
-  font-weight: 700;
-}
-
-بدنه اصلی
-main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 60px;
-}
-
-.contact-section {
-  display: flex;
-  gap: 40px;
-  width: 100%;
-  max-width: 1100px;
-}
-
-فرم
-.form-container {
-  background-color: #ffffff;
-  border-right: 4px solid #14529d;
-  padding: 40px 35px;
-  border-radius: 10px;
-  flex: 1;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.form-container h2 {
-  font-size: 28px;
-  color: #000;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.form-container h2::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -6px;
-  width: 70px;
-  height: 3px;
-  background-color: #14529d;
-}
-
-.form-container .desc {
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 25px;
-  font-size: 15px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form label {
-  font-weight: 600;
-  font-size: 14px;
-  color: #222;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px 15px;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-  resize: none;
-  transition: 0.2s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #14529d;
-  background-color: #f8fbff;
-  outline: none;
-}
-
-.contact-btn {
-  display: inline-block;
-  background-color: #14529d;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  margin-top: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-btn:hover {
-  background-color: #11498a;
-}
-
-اطلاعات تماس
-.info-container {
-  flex: 1;
-  background-color: #fff;
-  padding: 40px 35px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.info-container h2 {
-  font-size: 26px;
-  color: #14529d;
-  margin-bottom: 20px;
-}
-
-.info-container p {
-  font-size: 16px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.map-box {
-  margin-top: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-ریسپانسیو
-@media (max-width: 900px) {
-  main {
-    padding: 20px;
-  }
-
-  .contact-section {
-    flex-direction: column;
-  }
-
-  .form-container, .info-container {
-    width: 100%;
-  }
-}
-.foot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-.foot a {
-    display: inline-block;
-      background-color: #14529d;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 6px;
-      margin-top: 25px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-}  */

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سبد خرید | نرسی‌مِد</title>
+  <link rel="stylesheet" href="../../css/shop/cart.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  
+</head>
+
+<body>
+
+<div id="headerPlaceholder"></div>
+
+<section class="cart-page">
+
+  <h1 class="page-title">سبد خرید</h1>
+
+  <div class="cart-container">
+
+    <!-- CART ITEMS -->
+    <div class="cart-items">
+
+      <!-- ITEM 1 -->
+      <div class="cart-item">
+        <img src="https://i.ibb.co/82j3vk6/icu.jpg" alt="ICU Course">
+        <div class="item-info">
+          <h3>دوره جامع ICU بزرگسال</h3>
+          <span class="level">سطح: پیشرفته</span>
+          <span class="price">3,200,000 تومان</span>
+        </div>
+
+        <div class="qty-box">
+          <button>-</button>
+          <input type="text" value="1" readonly>
+          <button>+</button>
+        </div>
+
+        <div class="item-total">3,200,000 تومان</div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="cart-item">
+        <img src="https://i.ibb.co/NVmc8j5/emergency.jpg" alt="Emergency Course">
+        <div class="item-info">
+          <h3>فوریت‌های پزشکی پیشرفته</h3>
+          <span class="level">سطح: متوسط</span>
+          <span class="price">2,750,000 تومان</span>
+        </div>
+
+        <div class="qty-box">
+          <button>-</button>
+          <input type="text" value="1" readonly>
+          <button>+</button>
+        </div>
+
+        <div class="item-total">2,750,000 تومان</div>
+      </div>
+
+    </div>
+
+    <!-- SUMMARY -->
+    <aside class="cart-summary">
+      <h3>خلاصه سفارش</h3>
+
+      <div class="row">
+        <span>جمع جزء</span>
+        <span>5,950,000 تومان</span>
+      </div>
+
+      <div class="row">
+        <span>تخفیف</span>
+        <span>0 تومان</span>
+      </div>
+
+      <div class="row total">
+        <span>مبلغ قابل پرداخت</span>
+        <span>5,950,000 تومان</span>
+      </div>
+
+      <a href="./checkout.html" class="checkout-btn">ادامه جهت پرداخت</a>
+      <a href="../index.html" class="back-btn">ادامه خرید دوره‌ها</a>
+    </aside>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 نرسی‌مِد – مرجع آموزش تخصصی پزشکی
+</footer>
+ <script>
+fetch('../../components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('headerPlaceholder').innerHTML = data;
+  });
+</script>
+</body>
+</html>

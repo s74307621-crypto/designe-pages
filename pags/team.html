@@ -7,21 +7,21 @@
   <title>اعضای تیم | نرسیمد</title>
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <!-- Theme & Page Styles -->
-  <link rel="stylesheet" href="../css/light.css">
   <link rel="stylesheet" href="../css/team.css">
 </head>
 
 <body>
 
   <!-- Header -->
-  <header class="team-header surface-container-high">
-    <h1>اعضای تیم نرسیمد</h1>
-    <p>تیمی از متخصصان، پزشکان و مدرسین برتر حوزه هوش مصنوعی پزشکی</p>
-  </header>
+
+    
+    <div id="headerPlaceholder"></div>
+
+
+
 
   <!-- Intro -->
   <section class="intro surface-container">
@@ -79,15 +79,22 @@
 
   </section>
 
-  <div class="links">
-    <a href="../pags/contact.html" target="_blank" class="btn tonal">تماس با ما</a>
-    <a href="./pags/about.html" target="_blank" class="btn tonal">درباره ما</a>
-  </div>
 
   <!-- Footer -->
   <footer class="team-footer surface-container-high">
     <p>© 2025 نرسیمد | آموزش و توسعه پزشکی</p>
   </footer>
+
+
+
+
+  <script>
+fetch('../components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('headerPlaceholder').innerHTML = data;
+  });
+</script>
 
 </body>
 

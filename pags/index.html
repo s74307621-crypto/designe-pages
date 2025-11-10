@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>نرسی‌مِد | دوره‌های تخصصی پزشکی</title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/header.css">
+    </head>
+
+<body class="light">
+
+<div id="headerPlaceholder"></div>
+
+<section class="hero">
+  <h1>آموزش تخصصی پزشکی با نرسی‌مِد</h1>
+  <p>جدیدترین دوره‌های تخصصی پزشکی، پرستاری، اورژانس و مهارت‌های بالینی</p>
+</section>
+
+<section class="courses-section">
+  <h2 class="section-title">دوره‌های منتخب</h2>
+
+  <div class="courses-grid">
+
+    <!-- CARD 1 -->
+    <div class="course-card">
+      <div class="badge">پرفروش 🔥</div>
+      <div class="img-box">
+        <img src="https://i.ibb.co/82j3vk6/icu.jpg" alt="ICU Course">
+      </div>
+      <h3>دوره جامع ICU بزرگسال</h3>
+      <p class="desc">مراقبت‌های ویژه، ونتیلاتور، گازهای خونی، سِداشن و داروهای حیاتی</p>
+      <div class="meta">
+        <span>سطح: پیشرفته</span>
+        <span>⭐ 4.9</span>
+      </div>
+      <div class="price-row">
+        <span class="price">3,200,000 تومان</span>
+        <span class="old-price">4,500,000</span>
+      </div>
+      <a href="./shop/cart.html" class="add-cart-btn">افزودن به سبد خرید</a>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="course-card">
+      <div class="badge blue">جدید 🎯</div>
+      <div class="img-box">
+        <img src="https://i.ibb.co/NVmc8j5/emergency.jpg" alt="Emergency Course">
+      </div>
+      <h3>فوریت‌های پزشکی پیشرفته</h3>
+      <p class="desc">ACLS ،BLS ،CPR، مدیریت تروما، شوک و اورژانس‌های حیاتی</p>
+      <div class="meta">
+        <span>سطح: متوسط</span>
+        <span>⭐ 4.7</span>
+      </div>
+      <div class="price-row">
+        <span class="price">2,750,000 تومان</span>
+      </div>
+      <a href="./shop/cart.html" class="add-cart-btn">افزودن به سبد خرید</a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="course-card">
+      <div class="img-box">
+        <img src="https://i.ibb.co/L1YxKsZ/pharma.jpg" alt="Pharmacology Course">
+      </div>
+      <h3>داروشناسی بالینی</h3>
+      <p class="desc">دوزینگ، تداخلات دارویی، نحوه تجویز، و کاربرد داروها در بالین</p>
+      <div class="meta">
+        <span>سطح: پایه</span>
+        <span>⭐ 4.6</span>
+      </div>
+      <div class="price-row">
+        <span class="price">1,980,000 تومان</span>
+      </div>
+      <a href="./shop/cart.html" class="add-cart-btn">افزودن به سبد خرید</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 نرسی‌مِد – مرجع آموزش تخصصی پزشکی
+</footer>
+ <script>
+fetch('../components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('headerPlaceholder').innerHTML = data;
+  });
+</script>
+</body>
+</html>

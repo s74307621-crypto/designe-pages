@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پیش‌فاکتور / فاکتور</title>
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<div id="header"></div>
+<script>
+fetch("../components/header.html")
+  .then(response => response.text())
+  .then(data => document.getElementById("header").innerHTML = data);
+</script>
+
+<main class="main-container">
+  <h1>پیش‌فاکتور خرید</h1>
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>محصول</th>
+        <th>تعداد</th>
+        <th>قیمت واحد</th>
+        <th>جمع</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>محصول ۱</td>
+        <td>۲</td>
+        <td>100,000 تومان</td>
+        <td>200,000 تومان</td>
+      </tr>
+      <tr>
+        <td>محصول ۲</td>
+        <td>۱</td>
+        <td>150,000 تومان</td>
+        <td>150,000 تومان</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">جمع کل</td>
+        <td>350,000 تومان</td>
+      </tr>
+    </tfoot>
+  </table>
+  <a href="#" class="auth-btn">تایید و پرداخت نهایی</a>
+</main>
+
+</body>
+</html>

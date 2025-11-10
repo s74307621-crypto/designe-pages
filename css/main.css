@@ -1,0 +1,154 @@
+@import url(./light.css);
+
+body.light {
+  --font-main: "Vazirmatn", sans-serif;
+  --color-primary: #396CF0;
+  --color-primary-dark: #083EC6;
+  --color-secondary: #FF8A25;
+
+  --color-background: #FAF8FF;
+  --color-surface: #FFFFFF;
+  --color-outline: #E3E3EC;
+  --shadow-color: rgba(0,0,0,0.07);
+
+  --radius: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-background);
+  margin: 0;
+  padding: 0;
+  color: #1A1B21;
+  line-height: 1.7;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #396CF0, #083EC6);
+  color: white;
+}
+.hero h1 { font-size: 2.6rem; font-weight: 800; margin-bottom: 10px; }
+.hero p { opacity: 0.92; max-width: 600px; margin: auto; }
+
+/* ===== COURSES ===== */
+.courses-section {
+  padding: 50px 20px;
+  max-width: 1180px;
+  margin: auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.courses-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.course-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--color-outline);
+  box-shadow: 0 4px 14px var(--shadow-color);
+  transition: transform .25s;
+  padding-bottom: 20px;
+  position: relative;
+}
+.course-card:hover { transform: translateY(-6px); }
+
+/* Badge top */
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #FF8A25;
+  color: white;
+  padding: 4px 10px;
+  font-size: .8rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.badge.blue { background: #396CF0; }
+
+/* Image */
+.img-box img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* Texts */
+.course-card h3 {
+  font-size: 1.25rem;
+  padding: 15px 16px 5px;
+  font-weight: 700;
+}
+.desc {
+  padding: 0 16px;
+  font-size: .92rem;
+  color: #52525d;
+  margin-bottom: 10px;
+}
+
+/* Meta */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: .85rem;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* Price */
+.price-row {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.price {
+  color: var(--color-primary-dark);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.old-price {
+  font-size: .9rem;
+  color: #9f9f9f;
+  text-decoration: line-through;
+}
+
+/* Button */
+.add-cart-btn {
+  display: block;
+  margin: 0 16px;
+  padding: 11px;
+  background: var(--color-secondary);
+  color: white;
+  text-align: center;
+  border-radius: var(--radius);
+  font-size: .95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .25s;
+}
+.add-cart-btn:hover { background: #FF7600; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: #DDE5FF;
+  padding: 20px;
+  text-align: center;
+  font-size: .92rem;
+  color: #1A2E7B;
+  margin-top: 50px;
+}

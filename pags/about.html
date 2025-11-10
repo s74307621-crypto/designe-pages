@@ -16,9 +16,12 @@
 </head>
 
 <body class="light">
-    <header>
-        <h1 class="heding-one">درباره ما</h1>
-    </header>
+    
+    <div id="headerPlaceholder"></div>
+
+
+
+ 
 
     <main>
         <div class="text-section">
@@ -62,10 +65,7 @@
             </div>
 
           
-  <div class="links">
-    <a href="../pags/contact.html" target="_blank" class="btn tonal">تماس با ما</a>
-    <a href="../pags/team.html" target="_blank" class="btn tonal">اعضا ما</a>
-  </div>
+  
         </div>
 
         <div class="image-section">
@@ -82,5 +82,15 @@
     <p>© 2025 نرسیمد | آموزش و توسعه پزشکی</p>
   </footer>
 </body>
+
+
+
+  <script>
+fetch('../components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('headerPlaceholder').innerHTML = data;
+  });
+</script>
 
 </html>

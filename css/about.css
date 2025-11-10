@@ -1,6 +1,6 @@
-/* ==========================================
-   🌞 About Page - Unified with Team Page Style
-========================================== */
+
+
+@import url(./light.css);
 
 body {
     font-family: var(--font-main);
@@ -9,23 +9,6 @@ body {
     direction: rtl;
     margin: 0;
     padding: 0;
-}
-
-/* Header */
-header {
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-    color: var(--color-on-primary);
-    padding: 4rem 2rem;
-    text-align: center;
-    border-bottom-left-radius: 1.2rem;
-    border-bottom-right-radius: 1.2rem;
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
 }
 
 /* Main layout */
@@ -129,61 +112,6 @@ main {
 .logo-list img:hover {
     transform: scale(1.1);
 }
-/* Tonal Button (Container) */
-.btn.tonal {
-  background-color: var(--color-primary-container);
-  color: var(--color-on-primary-container);
-}
-
-.btn.tonal:hover {
-  background-color: var(--color-primary-light);
-  color: var(--color-on-primary);
-}
-/* =======================
-   🧭 Bottom Buttons
-======================= */
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 3rem 0 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-/* Primary Button */
-.btn.primary {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-}
-
-.btn.primary:hover {
-  background-color: var(--color-primary-dark);
-}
-/* Buttons
-.contact-btn {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-    padding: 12px 24px;
-    border-radius: 1rem;
-    margin-top: 2rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.contact-btn:hover {
-    background-color: var(--color-primary-dark);
-    transform: translateY(-2px);
-} */
-
-/* Image Section */
 .image-section {
     flex: 1 1 45%;
     position: relative;
