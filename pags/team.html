@@ -80,12 +80,16 @@
   </section>
 
 
-  <!-- Footer -->
-  <footer class="team-footer surface-container-high">
-    <p>© 2025 نرسیمد | آموزش و توسعه پزشکی</p>
-  </footer>
+    <!-- Footer -->
+  <div id="footer-placeholder"></div>
 
-
+<script>
+    fetch("../components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        });
+</script>
 
 
   <script>
