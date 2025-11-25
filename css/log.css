@@ -10,6 +10,9 @@
     --md-sys-color-secondary: rgb(54 103 92);
     --md-sys-color-tertiary: rgb(105 77 171);
     --md-sys-color-outline: rgb(149 110 105);
+    --md-sys-typescale-body-small: 0.875rem; /*14px*/
+    --md-sys-typescale-font-weight-medium: 500;
+    --md-sys-shape-corner-small: 8px;
 }
 
 body {
@@ -20,6 +23,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-size: var(--md-sys-typescale-body-small);
+  font-weight: var(--md-sys-typescale-font-weight-medium);
+  padding: 6px 16px;
+  border-radius: var(--md-sys-shape-corner-small);
+  border: none;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--md-sys-color-secondary);
+  box-shadow: 0 2px 4px var(--md-sys-color-on-surface);
+  transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+  background-color: var(--md-sys-color-secondary);
+  box-shadow: 0 1px 2px var(--md-sys-color-on-surface);
+  transform: translateY(0);
 }
 
 .login-box {
@@ -55,22 +87,6 @@ input {
 
 input:focus {
     border-color: var(--md-sys-color-secondary);
-}
-
-button {
-    width: 100%;
-    background-color: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 15px;
-}
-
-button:hover {
-    background-color: var(--md-sys-color-secondary);
 }
 
 .links {
