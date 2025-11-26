@@ -89,3 +89,58 @@
 }
 
 
+/* =====================================================
+   🎨 Primary Filled Button – SMALL — Material 3
+   Uses your custom M3 color + typography variables
+===================================================== */
+
+.btn-primary-filled-sm {
+  font-family: var(--font-main);
+  font-size: 0.875rem;                /* 14px — M3 Small Label */
+  font-weight: 500;                   /* Medium */
+  line-height: 1.25rem;               /* 20px */
+  letter-spacing: 0.1px;
+  text-align: center;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 6px 16px;                  /* M3 small size */
+  border-radius: 8px;                 /* Official MD3 small button radius */
+  border: none;
+
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);   /* Elevation 1 */
+}
+
+/* Hover */
+.btn-primary-filled-sm:hover {
+  background: var(--color-primary-light);
+  box-shadow: 0 3px 6px var(--shadow-color);   /* Elevation 2 */
+}
+
+/* Focus (Keyboard) */
+.btn-primary-filled-sm:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}
+
+/* Active (Pressed) */
+.btn-primary-filled-sm:active {
+  background: var(--color-primary-dark);
+  box-shadow: none;
+}
+
+/* Disabled */
+.btn                                                                                                    -primary-filled-sm:disabled {
+  background: var(--color-surface-container-high);
+  color: rgba(0,0,0,0.38);
+  cursor: not-allowed;
+  box-shadow: none;
+}

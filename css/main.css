@@ -128,20 +128,20 @@ body {
 }
 
 /* Button */
-.add-cart-btn {
-  display: block;
+.btn-primary-filled-sm{
+  display: block !important;
   margin: 0 16px;
-  padding: 11px;
-  background: var(--color-secondary);
-  color: white;
-  text-align: center;
+  /* padding: 11px; */
+  /* background: var(--color-secondary);
+  color: white; */
+  /* 
   border-radius: var(--radius);
   font-size: .95rem;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: none; */
   transition: .25s;
 }
-.add-cart-btn:hover { background: #FF7600; }
+/* .add-cart-btn:hover { background: #FF7600; } */
 
 /* ===== FOOTER ===== */
 footer {

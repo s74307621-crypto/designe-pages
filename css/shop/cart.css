@@ -121,11 +121,9 @@ body {
   margin-top: 10px;
 }
 
-.checkout-btn {
-  display: block;
-  background: #FF8A25;
-  color: white;
-  padding: 12px;
+.btn-primary-filled-sm{
+  display: block !important;
+  padding: 12px 24px !important;
   text-align: center;
   border-radius: 12px;
   font-weight: 600;
