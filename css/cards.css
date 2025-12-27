@@ -1,0 +1,41 @@
+@import url('material.css');
+
+/* ====== Material Design 3 – Card Base ====== */
+.m-card {
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--surface);
+  transition: all 0.3s ease;
+}
+
+/* ====== Card Styles ====== */
+.card-filled {
+  background: rgb(244 251 247);
+}
+
+.card-outlined {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+}
+
+.card-elevated {
+  background: var(--surface);
+  box-shadow:
+    0px 1px 2px rgba(0,0,0,0.3),
+    0px 1px 3px 1px rgba(0,0,0,0.15);
+}
+
+/* ====== States ====== */
+.card-enabled {
+  box-shadow: none;
+}
+.card-hover:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.card-focus:focus-within {
+  box-shadow: 0 0 0 3px rgba(0,107,92,0.3);
+}
+.card-pressed:active {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: scale(0.99);
+}

@@ -1,0 +1,58 @@
+@import url('material.css');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+
+*{
+  font-family: "Vazirmatn", sans-serif;
+}
+
+h2{
+    direction: rtl;
+    margin-bottom: 20px;
+}
+
+.m-table-wrapper {
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+}
+
+.m-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.m-table thead {
+  background: var(--background);
+}
+
+.m-table th,
+.m-table td {
+  padding: 12px 16px;
+  text-align: right;
+  color: var(--on-surface);
+  font-weight: 400;
+}
+
+.m-table th {
+  font-weight: 900;
+  border-bottom: 1px solid var(--outline);
+}
+
+.m-table tbody tr {
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  transition: background 0.2s;
+}
+
+.m-table tbody tr:hover {
+  background: rgba(0,107,92,0.05);
+}
+
+/* ====== Thumbnail Image ====== */
+.table-img {
+  width: 100px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}

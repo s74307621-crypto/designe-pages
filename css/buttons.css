@@ -1,0 +1,102 @@
+@import url('material.css');
+
+.m-btn {
+  font-family: inherit;
+  border-radius: 999px; /* کاملاً گرد */
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* ====== Button Styles ====== */
+.btn-filled {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.btn-outlined {
+  background: transparent;
+  border: 1px solid var(--outline);
+  color: var(--primary);
+}
+
+.btn-tonal {
+  background: rgb(128 157 152);
+  color: #00201a;
+}
+
+.btn-elevated {
+  background: var(--surface);
+  color: var(--primary);
+  box-shadow: 0 1px 2px rgba(0,0,0,.3),
+              0 1px 3px 1px rgba(0,0,0,.15);
+}
+
+.btn-text {
+  background: transparent;
+  color: var(--primary);
+}
+
+/* ====== Button Sizes ====== */
+.btn-x-small {
+  height: 28px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.btn-small {
+  height: 32px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.btn-medium {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.btn-large {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 15px;
+}
+
+.btn-x-large {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+}
+/* ====== Shapes ====== */
+.btn-round {
+  border-radius: 999px;
+}
+
+.btn-square {
+  border-radius: 8px;
+}
+/* ====== States ====== */
+.btn-enabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+.btn-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.btn-hover:hover {
+  background: rgb(0 90 78);
+}
+.btn-focus:focus {
+  box-shadow: 0 0 0 3px rgba(0,107,92,0.3);
+}
+.btn-pressed:active {
+  transform: scale(0.97);
+  background: rgb(0 75 65);
+}
+

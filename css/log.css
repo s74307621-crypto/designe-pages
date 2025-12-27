@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+@import url('material.css');
+
+
+body {
+    font-family: "vazirmatn";
+    background-color: var(--md-sys-color-primary-body);
+    color: var(--md-sys-color-on-surface);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-size: var(--md-sys-typescale-body-small);
+  font-weight: var(--md-sys-typescale-font-weight-medium);
+  padding: 6px 16px;
+  border-radius: var(--md-sys-shape-corner-small);
+  border: none;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--md-sys-color-secondary);
+  box-shadow: 0 2px 4px var(--md-sys-color-on-surface);
+  transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+  background-color: var(--md-sys-color-secondary);
+  box-shadow: 0 1px 2px var(--md-sys-color-on-surface);
+  transform: translateY(0);
+}
+
+.login-box {
+    background-color: var(--md-sys-color-background);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--md-sys-color-outline);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--md-sys-color-secondary);
+}
+
+p {
+    font-size: 14px;
+    color: var(--md-sys-color-on-surface);
+    margin-bottom: 20px;
+}
+
+input {
+    direction: rtl;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--md-sys-color-secondary);
+}
+
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    color: var(--md-sys-color-tertiary);
+    text-decoration: none;
+}
+
+.sub-link a {
+            color: var(--md-sys-color-on-primary);
+            text-decoration: none;
+}
