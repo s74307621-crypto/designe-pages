@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>دوره‌های تخصصی پزشکی | نرسیمد</title>
+
+  <!-- Light Theme + Components -->
+  <link rel="stylesheet" href="/css/light.css">
+  <link rel="stylesheet" href="/css/shop.css">
+</head>
+
+<body class="light">
+<div id="headerPlaceholder"></div>
+
+  <main class="courses-page">
+
+    <!-- Page Header -->
+    <header class="courses-header">
+      <h1>دوره‌های تخصصی پزشکی</h1>
+      <p>
+        آموزش‌های حرفه‌ای ویژه پزشکان، پرستاران و کادر درمان
+      </p>
+    </header>
+
+    <!-- Courses Grid -->
+    <section class="courses-grid">
+
+      <!-- Course Card -->
+      <article class="m3-card m3-card--elevated course-card">
+        <span class="course-badge">پرطرفدار</span>
+
+        <h3 class="course-title">
+          مراقبت‌های ویژه ICU
+        </h3>
+
+        <p class="course-desc">
+          آموزش جامع مراقبت‌های ویژه بیماران بدحال ویژه پرستاران و پزشکان
+        </p>
+
+        <div class="course-meta">
+          <span>⏱ ۴۰ ساعت</span>
+          <span>🎓 گواهینامه</span>
+        </div>
+
+        <div class="course-footer">
+          <span class="course-price">۲٬۹۰۰٬۰۰۰ تومان</span>
+          <button class="m3-btn m3-btn--filled m3-btn--sm">
+            ثبت‌نام
+          </button>
+        </div>
+      </article>
+
+      <!-- Course Card -->
+      <article class="m3-card m3-card--outlined course-card">
+        <h3 class="course-title">
+          فوریت‌های پزشکی
+        </h3>
+
+        <p class="course-desc">
+          مهارت‌های حیاتی در برخورد با شرایط اورژانسی و احیای بیماران
+        </p>
+
+        <div class="course-meta">
+          <span>⏱ ۲۵ ساعت</span>
+          <span>🎓 مدرک معتبر</span>
+        </div>
+
+        <div class="course-footer">
+          <span class="course-price">۱٬۸۵۰٬۰۰۰ تومان</span>
+          <button class="m3-btn m3-btn--filled m3-btn--sm">
+            ثبت‌نام
+          </button>
+        </div>
+      </article>
+
+      <!-- Course Card -->
+      <article class="m3-card m3-card--filled course-card">
+        <h3 class="course-title">
+          کنترل عفونت در مراکز درمانی
+        </h3>
+
+        <p class="course-desc">
+          پیشگیری و کنترل عفونت‌های بیمارستانی بر اساس استانداردهای جهانی
+        </p>
+
+        <div class="course-meta">
+          <span>⏱ ۱۸ ساعت</span>
+          <span>📘 آنلاین</span>
+        </div>
+
+        <div class="course-footer">
+          <span class="course-price">۹۹۰٬۰۰۰ تومان</span>
+          <button class="m3-btn m3-btn--outlined m3-btn--sm">
+            مشاهده جزئیات
+          </button>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+    <div id="footer-placeholder"></div>
+
+    <script>
+    fetch("../components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        });
+</script>
+ <script>
+fetch('../components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('headerPlaceholder').innerHTML = data;
+  });
+</script>
+</body>
+</html>

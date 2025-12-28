@@ -4,12 +4,13 @@
    + Vazirmatn font included
 ------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+@import url("components.css");
 .light {
   /* ============================
      📌 FONT (وزیر)
   ============================ */
-  --font-main: "Vazirmatn", sans-serif;
-
+  --font-main: "Vazirmatn";
+font-family: "Vazirmatn";
   /* ============================
      🎨 BRAND COLORS (اصلی)
      primary / secondary / tertiary

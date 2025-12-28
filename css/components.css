@@ -1,0 +1,104 @@
+/* =========================
+   🔘 M3 BUTTON – BASE
+========================= */
+.m3-btn {
+  font-family: var(--font-main);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  border-radius: 999px; /* کاملاً گرد */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+/* =========================
+   📏 BUTTON SIZES
+========================= */
+.m3-btn--xs {
+  height: 28px;
+  padding: 0 12px;
+  font-size: 0.75rem; /* 12px */
+}
+
+.m3-btn--sm {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 0.875rem; /* 14px */
+}
+
+.m3-btn--md {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 0.875rem;
+}
+
+.m3-btn--lg {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 1rem; /* 16px */
+}
+
+.m3-btn--xl {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 1.125rem; /* 18px */
+}
+
+.m3-btn--filled {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.m3-btn--outlined {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-outline);
+}
+
+.m3-btn--tonal {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.m3-btn--elevated {
+  background: var(--surface-container-low);
+  color: var(--color-primary);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3),
+              0 1px 3px 1px rgba(0,0,0,0.15);
+}
+.m3-btn--text {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+
+/* =========================
+   🧱 M3 CARD – BASE
+========================= */
+.m3-card {
+  font-family: var(--font-main);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--color-on-surface);
+}
+
+.m3-card--filled {
+  background: var(--surface-container-highest);
+}
+
+.m3-card--outlined {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+}
+
+.m3-card--elevated {
+  background: var(--surface-container-low);
+  box-shadow:
+    0px 1px 2px rgba(0,0,0,0.3),
+    0px 1px 3px 1px rgba(0,0,0,0.15);
+}
