@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>لیست کاربران | Admin</title>
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="/css/light.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/admin-users.css" />
+
+ 
+</head>
+
+<body class="light">
+
+       <div id="headerPlaceholder"></div>   
+  <div class="page-container">
+
+  <!-- ================= USERS TABLE ================= -->
+  <div class="page-header">
+    <div class="page-title">لیست کاربران</div>
+    <button class="m3-btn m3-btn--filled m3-btn--sm">
+      افزودن کاربر
+    </button>
+  </div>
+
+  <div class="m3-card m3-card--outlined m3-table-wrapper">
+    <table class="m3-table">
+      <thead>
+        <tr>
+          <th>تصویر</th>
+          <th>نام</th>
+          <th>ایمیل</th>
+          <th>نقش</th>
+          <th>وضعیت</th>
+          <th>عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://i.pravatar.cc/80?img=12" class="avatar"></td>
+          <td>علی رضایی</td>
+          <td>ali@example.com</td>
+          <td>ادمین</td>
+          <td><span class="status status--active">فعال</span></td>
+          <td class="actions">
+            <button class="m3-btn m3-btn--text m3-btn--xs">ویرایش</button>
+            <button class="m3-btn m3-btn--text m3-btn--xs">حذف</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><img src="https://i.pravatar.cc/80?img=32" class="avatar"></td>
+          <td>مریم احمدی</td>
+          <td>maryam@example.com</td>
+          <td>کاربر</td>
+          <td><span class="status status--inactive">غیرفعال</span></td>
+          <td class="actions">
+            <button class="m3-btn m3-btn--text m3-btn--xs">ویرایش</button>
+            <button class="m3-btn m3-btn--text m3-btn--xs">حذف</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ================= PRODUCTS TABLE ================= -->
+  <div class="page-header" style="margin-top:48px">
+    <div class="page-title">لیست محصولات / خدمات</div>
+  </div>
+
+  <div class="m3-card m3-card--outlined m3-table-wrapper">
+    <table class="m3-table">
+      <thead>
+        <tr>
+          <th>تصویر</th>
+          <th>نام محصول</th>
+          <th>دسته‌بندی</th>
+          <th>قیمت</th>
+          <th>وضعیت</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://picsum.photos/80?1" class="avatar"></td>
+          <td>مشاوره آنلاین</td>
+          <td>خدمات پزشکی</td>
+          <td>450,000 تومان</td>
+          <td><span class="status status--active">فعال</span></td>
+        </tr>
+
+        <tr>
+          <td><img src="https://picsum.photos/80?2" class="avatar"></td>
+          <td>آزمایش خون</td>
+          <td>آزمایشگاه</td>
+          <td>320,000 تومان</td>
+          <td><span class="status status--inactive">غیرفعال</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ================= MESSAGES TABLE ================= -->
+  <div class="page-header" style="margin-top:48px">
+    <div class="page-title">پیام‌های تماس با ما</div>
+  </div>
+
+  <div class="m3-card m3-card--outlined m3-table-wrapper">
+    <table class="m3-table">
+      <thead>
+        <tr>
+          <th>نام فرستنده</th>
+          <th>ایمیل</th>
+          <th>موضوع</th>
+          <th>تاریخ</th>
+          <th>وضعیت</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>سارا محمدی</td>
+          <td>sara@mail.com</td>
+          <td>درخواست مشاوره</td>
+          <td>1403/09/18</td>
+          <td><span class="status status--active">خوانده شده</span></td>
+        </tr>
+
+        <tr>
+          <td>رضا حسینی</td>
+          <td>reza@mail.com</td>
+          <td>مشکل در پرداخت</td>
+          <td>1403/09/17</td>
+          <td><span class="status status--inactive">جدید</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+  <div id="footer-placeholder"></div>
+
+<script>
+    fetch("../components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        });
+</script>
+
+</body>
+
+
+
+  <script>
+fetch('../components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('headerPlaceholder').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

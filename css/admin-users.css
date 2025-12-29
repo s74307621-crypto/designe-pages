@@ -1,0 +1,101 @@
+ 
+    body {
+      margin: 0;
+      background: var(--color-background);
+      color: var(--color-on-background);
+      font-family: var(--font-main);
+    }
+
+    .page-container {
+      padding: 32px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .page-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       📊 M3 TABLE
+    ========================= */
+    .m3-table-wrapper {
+      overflow-x: auto;
+      border-radius: 12px;
+    }
+
+    table.m3-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface-container-lowest);
+    }
+
+    .m3-table thead {
+      background: var(--surface-container);
+    }
+
+    .m3-table th,
+    .m3-table td {
+      padding: 14px 16px;
+      text-align: right;
+      font-size: 0.875rem;
+      border-bottom: 1px solid var(--color-outline-variant);
+      white-space: nowrap;
+    }
+
+    .m3-table th {
+      font-weight: 600;
+      color: var(--color-on-surface);
+    }
+
+    .m3-table tbody tr:hover {
+      background: var(--surface-container-low);
+    }
+
+    /* =========================
+       🖼️ AVATAR
+    ========================= */
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    /* =========================
+       🏷️ STATUS CHIP
+    ========================= */
+    .status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .status--active {
+      background: var(--color-secondary-container);
+      color: var(--color-on-secondary-container);
+    }
+
+    .status--inactive {
+      background: var(--color-error-container);
+      color: var(--color-on-error-container);
+    }
+
+    /* =========================
+       ⚙️ ACTIONS
+    ========================= */
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+ 
