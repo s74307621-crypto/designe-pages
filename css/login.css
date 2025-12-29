@@ -1,0 +1,58 @@
+@import url("light.css");
+@import url("components.css");
+
+/* صفحه */
+body {
+  background: var(--color-background);
+}
+
+
+/* سکشن لاگین */
+.auth-section {
+  min-height: calc(100vh - 160px); /* هدر + فوتر */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  flex-direction: column;
+}
+
+/* کارت */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.login-form ,.register-form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* عنوان */
+.auth-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* سوییچ */
+.auth-switch {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.auth-switch a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* فرم مخفی */
+.hidden {
+  display: none;
+}

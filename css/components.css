@@ -77,6 +77,60 @@
 }
 
 
+/* =====================================================
+   🔘 M3 BUTTON – SHAPE
+===================================================== */
+
+/* کاملاً گرد (Default) */
+.m3-btn--round {
+  border-radius: 999px;
+}
+
+/* مربعی */
+.m3-btn--square {
+  border-radius: 8px;
+}
+
+
+/* =====================================================
+   🔘 M3 BUTTON – STATES
+===================================================== */
+
+/* ENABLED (default) */
+.m3-btn {
+  transition: background 0.2s ease,
+              box-shadow 0.2s ease,
+              outline 0.2s ease;
+}
+
+/* HOVER */
+.m3-btn.is-hover {
+  background: var(--color-primary-light);
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+/* FOCUS */
+.m3-btn.is-focus {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}
+
+/* PRESSED (ACTIVE) */
+.m3-btn.is-active {
+  background: var(--color-primary-dark);
+  box-shadow: none;
+}
+
+/* DISABLED */
+.m3-btn.is-disabled {
+  background: var(--surface-container-high);
+  color: rgba(0,0,0,0.38);
+  cursor: not-allowed;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+
 /* =========================
    🧱 M3 CARD – BASE
 ========================= */
@@ -85,6 +139,9 @@
   border-radius: 12px;
   padding: 16px;
   color: var(--color-on-surface);
+    transition: background 0.25s ease,
+              box-shadow 0.25s ease,
+              outline 0.25s ease;
 }
 
 .m3-card--filled {
@@ -101,4 +158,247 @@
   box-shadow:
     0px 1px 2px rgba(0,0,0,0.3),
     0px 1px 3px 1px rgba(0,0,0,0.15);
+}
+/* =====================================================
+   🧱 M3 CARD – STATES
+===================================================== */
+
+
+/* HOVER */
+.m3-card.is-hover {
+  background: var(--surface-container-high);
+  box-shadow:
+    0px 2px 4px rgba(0,0,0,0.15),
+    0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* FOCUS */
+.m3-card.is-focus {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}
+
+/* PRESSED */
+.m3-card.is-active {
+  background: var(--surface-container);
+  box-shadow: none;
+}
+
+/* =========================
+   🔔 M3 BADGE – BASE
+========================= */
+.m3-badge-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+/* =========================
+   🔴 SMALL BADGE
+   فقط وقوع رو نشان می‌دهد
+========================= */
+.m3-badge--small {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-error);
+  border-radius: 50%;
+}
+
+/* =========================
+   🔴 LARGE BADGE
+   نمایش تعداد
+========================= */
+.m3-badge--large {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+
+  background: var(--color-error);
+  color: var(--color-on-error);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+
+  border-radius: 999px;
+}
+
+
+/* =========================
+   ☑️ M3 CHECKBOX
+========================= */
+
+.m3-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  color: var(--color-on-surface);
+}
+
+.m3-checkbox input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid var(--color-outline);
+  background: transparent;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Checked */
+.m3-checkbox input:checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.m3-checkbox input:checked::after {
+  content: "✓";
+  color: var(--color-on-primary);
+  font-size: 12px;
+}
+
+/* Hover */
+.m3-checkbox:hover input {
+  border-color: var(--color-primary);
+}
+
+/* Focus */
+.m3-checkbox input:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}
+
+/* Disabled */
+.m3-checkbox input:disabled {
+  border-color: var(--color-outline-variant);
+  background: var(--surface-container-high);
+  cursor: not-allowed;
+}
+
+.m3-checkbox input:disabled + span {
+  color: var(--color-outline);
+}
+
+
+/* =========================
+   🔘 M3 RADIO BUTTON
+========================= */
+
+.m3-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+}
+
+.m3-radio input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-outline);
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Checked */
+.m3-radio input:checked {
+  border-color: var(--color-primary);
+}
+
+.m3-radio input:checked::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+/* Hover */
+.m3-radio:hover input {
+  border-color: var(--color-primary);
+}
+
+/* Focus */
+.m3-radio input:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}
+
+/* Disabled */
+.m3-radio input:disabled {
+  border-color: var(--color-outline-variant);
+  background: var(--surface-container-high);
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   📝 M3 TEXT FIELD (OUTLINED)
+========================= */
+
+.m3-text-field {
+  position: relative;
+  font-family: var(--font-main);
+  width: 100%;
+  max-width: 360px;
+}
+
+.m3-text-field input {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-outline);
+  background: transparent;
+  color: var(--color-on-surface);
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+/* Label */
+.m3-text-field label {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: var(--color-surface);
+  padding: 0 4px;
+  font-size: 0.75rem;
+  color: var(--color-outline);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* Focus */
+.m3-text-field input:focus {
+  border-color: var(--color-primary);
+}
+
+.m3-text-field input:focus + label,
+.m3-text-field input:not(:placeholder-shown) + label {
+  top: -6px;
+  font-size: 0.7rem;
+  color: var(--color-primary);
+}
+
+/* Disabled */
+.m3-text-field input:disabled {
+  background: var(--surface-container-high);
+  border-color: var(--color-outline-variant);
 }

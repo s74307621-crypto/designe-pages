@@ -67,3 +67,15 @@ body {
 .mobile-menu {
   display: none;
 }
+
+/* =========================
+   🛒 CART ICON
+========================= */
+.left-continer{
+  display: flex;
+}
+.cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 16px;
+}

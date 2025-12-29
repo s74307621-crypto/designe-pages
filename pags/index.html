@@ -6,6 +6,8 @@
         <title>نرسی‌مِد | دوره‌های تخصصی پزشکی</title>
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/header.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
     </head>
 
 <body class="light">
@@ -38,7 +40,9 @@
         <span class="price">3,200,000 تومان</span>
         <span class="old-price">4,500,000</span>
       </div>
-      <a href="./shop/cart.html" class="btn-primary-filled-sm">افزودن به سبد خرید</a>
+        <button class="m3-btn m3-btn--filled m3-btn--sm add-to-cart">
+  افزودن به سبد
+</button>
     </div>
 
     <!-- CARD 2 -->
@@ -56,7 +60,9 @@
       <div class="price-row">
         <span class="price">2,750,000 تومان</span>
       </div>
-      <a href="./shop/cart.html" class="btn-primary-filled-sm">افزودن به سبد خرید</a>
+        <button class="m3-btn m3-btn--filled m3-btn--sm add-to-cart">
+  افزودن به سبد
+</button>
     </div>
 
     <!-- CARD 3 -->
@@ -73,12 +79,22 @@
       <div class="price-row">
         <span class="price">1,980,000 تومان</span>
       </div>
+
+
+
       <!-- <a href="./shop/cart.html" class="add-cart-btn">افزودن به سبد خرید</a> -->
-      <a href="./shop/cart.html" class="btn-primary-filled-sm add-cart-btn">افزودن به سبد خرید</a>
+      <button class="m3-btn m3-btn--filled m3-btn--sm add-to-cart">
+  افزودن به سبد
+  
+</button>
+
     </div>
 
   </div>
+  
 </section>
+
+
     <!-- Footer -->
   <div id="footer-placeholder"></div>
 
@@ -88,13 +104,24 @@
         .then(data => {
             document.getElementById("footer-placeholder").innerHTML = data;
         });
-</script>
- <script>
-fetch('../components/header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('headerPlaceholder').innerHTML = data;
+  let cartCount = 0;
+
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("add-to-cart")) {
+      cartCount++;
+      const badge = document.getElementById("cartBadge");
+      if (badge) {
+        badge.textContent = cartCount;
+        alert("محصول شما با موفقیت به سبد خرید اضافه شد.")
+      }
+    }
   });
+  
+  fetch('../components/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('headerPlaceholder').innerHTML = data;
+    });
 </script>
 </body>
 </html>
