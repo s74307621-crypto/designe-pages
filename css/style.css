@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+@import url('material.css');
+
+
+/* 🧩 تنظیمات کلی */
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-surface);
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  direction: rtl;
+}
+
+/* کانتینر کلی */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* 🏠 هدر */
+.header {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  height: 60px;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cart-icon { 
+  font-size: 1.5rem; 
+  cursor: pointer; 
+  margin-left: 16px; 
+}
+
+.btn-primary {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-size: var(--md-sys-typescale-body-small);
+  font-weight: var(--md-sys-typescale-font-weight-medium);
+  padding: 6px 16px;
+  border-radius: var(--md-sys-shape-corner-small);
+  border: none;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--md-sys-color-secondary);
+  box-shadow: 0 2px 4px var(--md-sys-color-on-surface);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active:not(:disabled) {
+  background-color: var(--md-sys-color-secondary);
+  box-shadow: 0 1px 2px var(--md-sys-color-on-surface);
+  transform: translateY(0);
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 0 10px;
+}
+
+.brand img{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav a {
+  color: var(--md-sys-color-on-primary);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--md-sys-color-tertiary);
+}
+
+.nav a.active {
+  border-bottom: 2px solid var(--md-sys-color-tertiary);
+  padding-bottom: 4px;
+}
+
+/* 🧱 کارت‌ها و بخش اصلی */
+.card {
+  background-color: var(--md-sys-color-surface);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 60vh;
+}
+
+/* صفحه عنوان */
+.page-title {
+  color: var(--md-sys-color-primary);
+  margin-top: 0;
+  border-bottom: 2px solid var(--md-sys-color-secondary);
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* 🔹 ساختار دو ستونه */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.col {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* کارت دوره‌ها */
+.course-card {
+  background-color: var(--md-sys-color-background);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  flex-grow: 1;
+  color: #444;
+}
+
+/* جدول سبد خرید */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid var(--md-sys-color-outline);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.cart-table thead {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.cart-table tfoot td {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* فرم ها */
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-size: var(--md-sys-typescale-body-small);
+  font-weight: var(--md-sys-typescale-font-weight-medium);
+  padding: 6px 16px;
+  border-radius: var(--md-sys-shape-corner-small);
+  border: none;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+form button:hover {
+  background-color: var(--md-sys-color-secondary);
+  box-shadow: 0 2px 4px var(--md-sys-color-on-surface);
+  transform: translateY(-1px);
+}
+
+/* 👥 تیم ما */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.member {
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+/* 📍 اطلاعات تماس */
+.contact-info {
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-primary);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+/* فوتر */
+.footer {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 0 0 12px 12px;
+  margin-top: 3rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0.9rem;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+h1 {
+  margin-bottom: 18px;
+  color: var(--md-sys-color-primary);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
