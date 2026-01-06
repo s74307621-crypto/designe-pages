@@ -1,0 +1,42 @@
+@import url(/css/material.css);
+
+.app {
+    direction: rtl;
+    background: var(--md-sys-color-background);
+    min-height: 100vh;
+    padding: 32px;
+    font-family: sans-serif;
+}
+
+.settings {
+    max-width: 520px;
+    margin: auto;
+    background: var(--md-sys-color-surface);
+    padding: 24px;
+    border-radius: var(--md-sys-shape-corner-small);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+    color: var(--md-sys-color-on-surface);
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.radio-group {
+    margin: 20px 0;
+}
+
+.radio-group p {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
