@@ -156,3 +156,46 @@ footer {
   color: #1A2E7B;
   margin-top: 50px;
 }
+
+/* ===== ICON BUTTON (LIKE) ===== */
+.icon-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  border: none;
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(255,255,255,1);
+  transform: scale(1.05);
+}
+
+.icon-btn .material-symbols-outlined {
+  font-size: 22px;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+/* حالت لایک شده */
+.icon-btn.liked .material-symbols-outlined {
+  color: #E53935; /* قرمز متریال */
+  font-variation-settings: "FILL" 1;
+}
+
+/* حالت پیش‌فرض (توخالی) */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0;
+}

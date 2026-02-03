@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nersimed Header</title>
   <link rel="stylesheet" href="/css/header.css">
+  <!-- Material Symbols (برای آیکون‌های متریال) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-
 <body>
 
   <header class="app-header light">
@@ -17,6 +17,7 @@
       <a href="/" class="logo">
         <img src="/assets/photo/ssss.png" alt="لوگو نرسیمد" />
       </a>
+
       <!-- منو دسکتاپ -->
       <nav class="nav-links">
         <a href="/pags/index.html">خانه</a>
@@ -27,19 +28,41 @@
 
       <div class="left-continer">
         <!-- سبد خرید -->
-         <div class="m3-badge-wrapper cart-icon">
-          🛒
-          <span id="cartBadge" class="m3-badge--large">0</span>
-        </div>
+        <a href="/pags/shop/cart.html" class="cart-icon-link">
+          <div class="m3-badge-wrapper">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span id="cartBadge" class="m3-badge--large">0</span>
+          </div>
+        </a>
 
         <!-- دکمه ورود/ثبت‌نام -->
-        <a href="#" class="btn-primary-filled-sm">ورود / ثبت‌نام</a>
+        <a href="/pags/login.html" class="btn-primary-filled-sm">ورود / ثبت‌نام</a>
+
+        <!-- آیکون همبرگری (فقط موبایل) -->
+        <button class="menu-btn" aria-label="منوی اصلی">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
       </div>
 
+      <!-- منوی موبایل (پنهان در دسکتاپ) -->
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="/pags/index.html">خانه</a>
+        <a href="/pags/contact.html">تماس با ما</a>
+        <a href="/pags/about.html">درباره ما</a>
+        <a href="/pags/team.html">تیم ما</a>
+        <a href="/pags/login.html" class="mobile-auth-btn">ورود / ثبت‌نام</a>
+      </nav>
     </div>
   </header>
 
+  <script>
+    // باز/بسته کردن منوی موبایل
+    const menuBtn = document.querySelector('.menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+  </script>
 </body>
-
 </html>

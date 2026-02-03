@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title id="pageTitle">جزئیات دوره | نرسیمد</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/light.css">
+  <link rel="stylesheet" href="/css/shop/course-detail.css">
+
+</head>
+<body class="light">
+<div id="headerPlaceholder"></div>
+
+<main class="detail-page">
+  <header class="course-header">
+    <div class="course-image" id="courseImage">تصویر دوره</div>
+    <div class="course-info">
+      <h1 id="courseTitle">بارگذاری...</h1>
+      <div class="rating">
+        <span class="stars" id="courseRating">★★★★☆</span>
+        <span id="ratingText">4.2 از 5</span>
+      </div>
+      <div class="course-meta">
+        <span id="courseDuration">⏱ ۴۰ ساعت</span> •
+        <span id="courseCertificate">🎓 گواهینامه</span>
+      </div>
+      <div class="course-price" style="font-size: 1.25rem; font-weight: 700; margin: 16px 0; color: var(--color-primary);" id="coursePrice">۲٬۹۰۰٬۰۰۰ تومان</div>
+      <button class="m3-btn m3-btn--filled">ثبت‌نام</button>
+    </div>
+  </header>
+
+  <div class="course-full-desc" id="courseDesc">
+    در حال بارگذاری توضیحات...
+  </div>
+
+  <!-- Reviews -->
+  <section class="reviews-section">
+    <h2>نظرات کاربران</h2>
+    <div id="reviewsList">
+      <!-- نظرات از اینجا لود می‌شوند -->
+    </div>
+
+    <div class="review-form">
+      <h3>نظر خود را بنویسید</h3>
+      <textarea id="reviewText" placeholder="نظر خود را درباره این دوره بنویسید..."></textarea>
+      <button class="m3-btn m3-btn--filled" onclick="submitReview()">ارسال نظر</button>
+    </div>
+  </section>
+
+  <!-- Related Courses -->
+  <section class="related-section">
+    <h2>دوره‌های مرتبط</h2>
+    <div class="related-grid" id="relatedCourses">
+      <!-- دوره‌های مرتبط اینجا نمایش داده می‌شوند -->
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+// داده‌های ساده (شبیه یک پایگاه داده استاتیک)
+const courses = {
+  icu: {
+    title: "مراقبت‌های ویژه ICU",
+    desc: "این دوره جامع‌ترین آموزش مراقبت‌های ویژه برای بیماران بحرانی را پوشش می‌دهد. شامل مدیریت تنفس مصنوعی، مانیتورینگ همودینامیک، داروهای وازوآکتیو و پروتکل‌های احیا. مناسب پزشکان متخصص داخلی، آنستزی و پرستاران ICU.",
+    price: "۲٬۹۰۰٬۰۰۰ تومان",
+    duration: "۴۰ ساعت",
+    certificate: "گواهینامه",
+    rating: "★★★★☆",
+    ratingText: "4.2 از 5"
+  },
+  emergency: {
+    title: "فوریت‌های پزشکی",
+    desc: "یادگیری واکنش سریع به شرایط اورژانسی از جمله ایست قلبی، شوک، ترومای شدید و مسمومیت‌ها. این دوره بر اساس پروتکل‌های ACLS و ATLS طراحی شده است.",
+    price: "۱٬۸۵۰٬۰۰۰ تومان",
+    duration: "۲۵ ساعت",
+    certificate: "مدرک معتبر",
+    rating: "★★★★★",
+    ratingText: "4.8 از 5"
+  },
+  infection: {
+    title: "کنترل عفونت در مراکز درمانی",
+    desc: "آموزش استانداردهای جهانی برای پیشگیری از عفونت‌های بیمارستانی، شامل شست‌وشوی دست، استریل شدن تجهیزات، مدیریت زباله‌های پزشکی و پروتکل‌های ایزولاسیون.",
+    price: "۹۹۰٬۰۰۰ تومان",
+    duration: "۱۸ ساعت",
+    certificate: "مدارک بین‌المللی",
+    rating: "★★★☆☆",
+    ratingText: "3.9 از 5"
+  }
+};
+
+// نظرات ذخیره‌شده (در حافظه مرورگر)
+function getReviews(courseId) {
+  const saved = localStorage.getItem(`reviews_${courseId}`);
+  return saved ? JSON.parse(saved) : [
+    { author: "دکتر رضایی", text: "محتوای بسیار کاربردی و به‌روز. پیشنهاد می‌کنم." },
+    { author: "پرستار احمدی", text: "ویدیوها با کیفیت بالا و مدرس بسیار خوب توضیح می‌داد." }
+  ];
+}
+
+function saveReviews(courseId, reviews) {
+  localStorage.setItem(`reviews_${courseId}`, JSON.stringify(reviews));
+}
+
+// دوره‌های مرتبط
+const relatedMap = {
+  icu: ["emergency", "infection"],
+  emergency: ["icu", "infection"],
+  infection: ["icu", "emergency"]
+};
+
+// بارگذاری صفحه
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('../../components/header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('headerPlaceholder').innerHTML = data);
+
+  fetch("../../components/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+
+  // دریافت ID از URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const courseId = urlParams.get('id') || 'icu';
+
+  if (!courses[courseId]) {
+    document.getElementById('courseTitle').textContent = "دوره یافت نشد";
+    return;
+  }
+
+  const course = courses[courseId];
+  document.getElementById('pageTitle').textContent = course.title + " | نرسیمد";
+  document.getElementById('courseTitle').textContent = course.title;
+  document.getElementById('courseDesc').textContent = course.desc;
+  document.getElementById('coursePrice').textContent = course.price;
+  document.getElementById('courseDuration').textContent = `⏱ ${course.duration}`;
+  document.getElementById('courseCertificate').textContent = `🎓 ${course.certificate}`;
+  document.getElementById('courseRating').textContent = course.rating;
+  document.getElementById('ratingText').textContent = course.ratingText;
+
+  // بارگذاری نظرات
+  loadReviews(courseId);
+
+  // بارگذاری دوره‌های مرتبط
+  loadRelatedCourses(courseId);
+});
+
+function loadReviews(courseId) {
+  const reviews = getReviews(courseId);
+  const container = document.getElementById('reviewsList');
+  container.innerHTML = '';
+  reviews.forEach(review => {
+    const el = document.createElement('div');
+    el.className = 'review-item';
+    el.innerHTML = `
+      <div class="review-author">${review.author}</div>
+      <div class="review-text">${review.text}</div>
+    `;
+    container.appendChild(el);
+  });
+}
+
+function submitReview() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const courseId = urlParams.get('id') || 'icu';
+  const text = document.getElementById('reviewText').value.trim();
+  if (!text) {
+    alert("لطفاً نظر خود را وارد کنید.");
+    return;
+  }
+  const author = prompt("نام یا عنوان شغلی خود را وارد کنید (مثال: دکتر کاظمی):", "ناشناس");
+  if (author === null) return;
+
+  const reviews = getReviews(courseId);
+  reviews.push({ author: author || "ناشناس", text });
+  saveReviews(courseId, reviews);
+  loadReviews(courseId);
+  document.getElementById('reviewText').value = '';
+  alert("نظر شما با موفقیت ثبت شد!");
+}
+
+function loadRelatedCourses(courseId) {
+  const relatedIds = relatedMap[courseId] || [];
+  const container = document.getElementById('relatedCourses');
+  container.innerHTML = '';
+
+  relatedIds.forEach(id => {
+    const course = courses[id];
+    if (!course) return;
+    const card = document.createElement('a');
+    card.href = `course-detail.html?id=${id}`;
+    card.className = 'm3-card m3-card--outlined';
+    card.style.padding = '16px';
+    card.style.textDecoration = 'none';
+    card.style.color = 'inherit';
+    card.innerHTML = `
+      <h3>${course.title}</h3>
+      <div style="margin: 8px 0; color: var(--color-primary);">${course.price}</div>
+      <div class="stars" style="color: #FFD700;">${course.rating}</div>
+    `;
+    container.appendChild(card);
+  });
+}
+</script>
+</body>
+</html>

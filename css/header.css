@@ -1,10 +1,11 @@
 @import url(./light.css);
-/* ------- Header Desktop ------- */
 
+/* ------- تنظیمات عمومی ------- */
 body {
-  padding-top: 80px; /* یا هر مقدار ارتفاع هدر */
+  padding-top: 80px; /* فاصله برای هدر ثابت */
 }
 
+/* ------- هدر اصلی ------- */
 .app-header {
   width: 100%;
   position: fixed;
@@ -24,6 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo img {
@@ -32,7 +34,7 @@ body {
   object-fit: contain;
 }
 
-/* Nav Links Desktop */
+/* ------- منوی دسکتاپ ------- */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -44,38 +46,119 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   transition: 0.3s;
-
 }
 
 .nav-links a:hover {
   color: var(--color-primary);
 }
 
-/* دکمه ورود/ثبت‌نام */
-.btn-primary-filled-sm{
+/* ------- سبد خرید ------- */
+.left-continer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-icon-link .material-symbols-outlined {
+  font-size: 24px;
+  color: var(--color-on-surface);
+  transition: color 0.2s;
+}
+
+.cart-icon-link:hover .material-symbols-outlined {
+  color: var(--color-primary);
+}
+
+/* ------- دکمه ورود/ثبت‌نام ------- */
+.btn-primary-filled-sm {
   padding: 4px 8px;
   border-radius: 8px;
   transition: 0.3s;
 }
 
-.auth-btn:hover {
-  background: var(--color-primary-dark);
-}
-
-/* حذف موبایل */
 .menu-btn,
 .mobile-menu {
   display: none;
 }
 
-/* =========================
-   🛒 CART ICON
-========================= */
-.left-continer{
-  display: flex;
-}
-.cart-icon {
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-left: 16px;
+@media (max-width: 768px) {
+  body {
+    padding-top: 72px; 
+  }
+
+  /* پنهان کردن منوی دسکتاپ */
+  .nav-links {
+    display: none;
+  }
+
+  /* نمایش دکمه همبرگری */
+  .menu-btn {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--color-on-surface);
+    padding: 4px;
+    margin-right: 8px;
+  }
+
+  .menu-btn:focus {
+    outline: 2px solid var(--color-primary-container);
+    border-radius: 8px;
+  }
+
+  /* منوی موبایل */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: var(--surface-container-lowest);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--color-on-surface);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 0;
+    display: block;
+  }
+
+  .mobile-menu a:hover {
+    color: var(--color-primary);
+  }
+
+  /* دکمه ورود در موبایل */
+  .mobile-auth-btn {
+    display: inline-block;
+    text-align: center;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-weight: 500;
+  }
+
+  /* سبد خرید در موبایل */
+  .cart-icon-link {
+    margin-left: 0;
+  }
 }

@@ -6,7 +6,6 @@ body {
   background: var(--color-background);
 }
 
-
 /* سکشن لاگین */
 .auth-section {
   min-height: calc(100vh - 160px); /* هدر + فوتر */
@@ -27,10 +26,11 @@ body {
   gap: 24px;
 }
 
-.login-form ,.register-form{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* عنوان */
@@ -40,19 +40,20 @@ body {
   font-weight: 700;
 }
 
-/* سوییچ */
-.auth-switch {
-  text-align: center;
-  font-size: 0.875rem;
-}
-
-.auth-switch a {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
 /* فرم مخفی */
 .hidden {
   display: none;
+}
+
+.m3-btn {
+  width: 100px;
+  height: 60px;
+}
+
+/* === خطاهای اعتبارسنجی === */
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  min-height: 1.2em;
+  margin-top: 4px;
 }

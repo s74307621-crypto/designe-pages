@@ -2,12 +2,13 @@
    📄 COURSES PAGE
 ========================= */
 
+/* در ابتدای shop.css */
 .courses-page {
   max-width: 1280px;
   margin: 0 auto;
   padding: 32px 16px 64px;
 }
-
+/* بدون تغییر — فقط مطمئن شوید padding کافی است */
 /* =========================
    🧠 HEADER
 ========================= */
@@ -93,4 +94,67 @@
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-primary);
+}
+
+
+
+/* Additional styles for filters */
+.quick-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+.quick-link {
+  text-decoration: none;
+  color: var(--color-outline);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+.quick-link.active,
+.quick-link:hover {
+  background: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.filters-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  align-items: end;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 8px;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.filter-group label {
+  font-size: 0.875rem;
+  color: var(--color-outline);
+}
+.filter-group select {
+  padding: 8px;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 8px;
+  font-family: var(--font-main);
+  background: white;
+}
+
+.course-card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
 }

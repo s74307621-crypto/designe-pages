@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>دوره‌های تخصصی پزشکی | نرسیمد</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Light Theme + Components -->
   <link rel="stylesheet" href="/css/light.css">
@@ -12,108 +13,214 @@
 <body class="light">
 <div id="headerPlaceholder"></div>
 
-  <main class="courses-page">
+<main class="courses-page">
 
-    <!-- Page Header -->
-    <header class="courses-header">
-      <h1>دوره‌های تخصصی پزشکی</h1>
-      <p>
-        آموزش‌های حرفه‌ای ویژه پزشکان، پرستاران و کادر درمان
-      </p>
-    </header>
+  <!-- Page Header -->
+  <header class="courses-header">
+    <h1>دوره‌های تخصصی پزشکی</h1>
+    <p>آموزش‌های حرفه‌ای ویژه پزشکان، پرستاران و کادر درمان</p>
+  </header>
 
-    <!-- Courses Grid -->
-    <section class="courses-grid">
+  <!-- Quick Links -->
+  <div class="quick-links">
+    <a href="#" class="quick-link active" data-filter="all">همه دوره‌ها</a>
+    <a href="#" class="quick-link" data-filter="bestseller">پرفروش‌ترین‌ها</a>
+  </div>
 
-      <!-- Course Card -->
-      <article class="m3-card m3-card--elevated course-card">
-        <span class="course-badge">پرطرفدار</span>
+  <!-- Filters & Search Bar -->
+  <div class="filters-section">
+    <!-- Search -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجوی دوره..." />
+    </div>
 
-        <h3 class="course-title">
-          مراقبت‌های ویژه ICU
-        </h3>
+    <!-- Category Filter -->
+    <div class="filter-group">
+      <label for="categoryFilter">دسته‌بندی:</label>
+      <select id="categoryFilter">
+        <option value="all">همه دسته‌ها</option>
+        <option value="icu">مراقبت‌های ویژه ICU</option>
+        <option value="emergency">فوریت‌های پزشکی</option>
+        <option value="infection">کنترل عفونت</option>
+      </select>
+    </div>
 
-        <p class="course-desc">
-          آموزش جامع مراقبت‌های ویژه بیماران بدحال ویژه پرستاران و پزشکان
-        </p>
+    <!-- Sort Dropdown -->
+    <div class="filter-group">
+      <label for="sortSelect">مرتب‌سازی:</label>
+      <select id="sortSelect">
+        <option value="default">پیش‌فرض</option>
+        <option value="price-asc">قیمت: کم به زیاد</option>
+        <option value="price-desc">قیمت: زیاد به کم</option>
+        <option value="duration-asc">مدت: کوتاه به بلند</option>
+        <option value="popularity">محبوبیت</option>
+      </select>
+    </div>
+  </div>
 
-        <div class="course-meta">
-          <span>⏱ ۴۰ ساعت</span>
-          <span>🎓 گواهینامه</span>
-        </div>
+  <!-- Courses Grid -->
+  <section class="courses-grid" id="coursesGrid">
+    <!-- Course Card 1 -->
+    <article class="m3-card m3-card--elevated course-card" data-category="icu" data-id="icu" data-price="2900000" data-duration="40" data-popular="true">
+      <span class="course-badge">پرطرفدار</span>
+      <h3 class="course-title">مراقبت‌های ویژه ICU</h3>
+      <p class="course-desc">آموزش جامع مراقبت‌های ویژه بیماران بدحال ویژه پرستاران و پزشکان</p>
+      <div class="course-meta">
+        <span>⏱ ۴۰ ساعت</span>
+        <span>🎓 گواهینامه</span>
+      </div>
+      <div class="course-footer">
+        <span class="course-price">۲٬۹۰۰٬۰۰۰ تومان</span>
+        <button class="m3-btn m3-btn--filled m3-btn--sm">ثبت‌نام</button>
+      </div>
+    </article>
 
-        <div class="course-footer">
-          <span class="course-price">۲٬۹۰۰٬۰۰۰ تومان</span>
-          <button class="m3-btn m3-btn--filled m3-btn--sm">
-            ثبت‌نام
-          </button>
-        </div>
-      </article>
+    <!-- Course Card 2 -->
+    <article class="m3-card m3-card--outlined course-card" data-category="emergency" data-id="emergency" data-price="1850000" data-duration="25" data-popular="false">
+      <h3 class="course-title">فوریت‌های پزشکی</h3>
+      <p class="course-desc">مهارت‌های حیاتی در برخورد با شرایط اورژانسی و احیای بیماران</p>
+      <div class="course-meta">
+        <span>⏱ ۲۵ ساعت</span>
+        <span>🎓 مدرک معتبر</span>
+      </div>
+      <div class="course-footer">
+        <span class="course-price">۱٬۸۵۰٬۰۰۰ تومان</span>
+        <button class="m3-btn m3-btn--filled m3-btn--sm">ثبت‌نام</button>
+      </div>
+    </article>
 
-      <!-- Course Card -->
-      <article class="m3-card m3-card--outlined course-card">
-        <h3 class="course-title">
-          فوریت‌های پزشکی
-        </h3>
+    <!-- Course Card 3 -->
+    <article class="m3-card m3-card--filled course-card" data-category="infection" data-id="infection" data-price="990000" data-duration="18" data-popular="false">
+      <h3 class="course-title">کنترل عفونت در مراکز درمانی</h3>
+      <p class="course-desc">پیشگیری و کنترل عفونت‌های بیمارستانی بر اساس استانداردهای جهانی</p>
+      <div class="course-meta">
+        <span>⏱ ۱۸ ساعت</span>
+        <span>📘 آنلاین</span>
+      </div>
+      <div class="course-footer">
+        <span class="course-price">۹۹۰٬۰۰۰ تومان</span>
+        <button class="m3-btn m3-btn--outlined m3-btn--sm">مشاهده جزئیات</button>
+      </div>
+    </article>
+  </section>
 
-        <p class="course-desc">
-          مهارت‌های حیاتی در برخورد با شرایط اورژانسی و احیای بیماران
-        </p>
+</main>
 
-        <div class="course-meta">
-          <span>⏱ ۲۵ ساعت</span>
-          <span>🎓 مدرک معتبر</span>
-        </div>
+<div id="footer-placeholder"></div>
 
-        <div class="course-footer">
-          <span class="course-price">۱٬۸۵۰٬۰۰۰ تومان</span>
-          <button class="m3-btn m3-btn--filled m3-btn--sm">
-            ثبت‌نام
-          </button>
-        </div>
-      </article>
-
-      <!-- Course Card -->
-      <article class="m3-card m3-card--filled course-card">
-        <h3 class="course-title">
-          کنترل عفونت در مراکز درمانی
-        </h3>
-
-        <p class="course-desc">
-          پیشگیری و کنترل عفونت‌های بیمارستانی بر اساس استانداردهای جهانی
-        </p>
-
-        <div class="course-meta">
-          <span>⏱ ۱۸ ساعت</span>
-          <span>📘 آنلاین</span>
-        </div>
-
-        <div class="course-footer">
-          <span class="course-price">۹۹۰٬۰۰۰ تومان</span>
-          <button class="m3-btn m3-btn--outlined m3-btn--sm">
-            مشاهده جزئیات
-          </button>
-        </div>
-      </article>
-
-    </section>
-
-  </main>
-    <div id="footer-placeholder"></div>
-
-    <script>
-    fetch("../components/footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-placeholder").innerHTML = data;
-        });
-</script>
- <script>
+<!-- Scripts -->
+<script>
 fetch('../components/header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('headerPlaceholder').innerHTML = data;
   });
+
+fetch("../components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  });
 </script>
+
+<script>
+// ========== FILTERING & SEARCH LOGIC ==========
+document.addEventListener('DOMContentLoaded', () => {
+  const coursesGrid = document.getElementById('coursesGrid');
+  const courseCards = Array.from(coursesGrid.querySelectorAll('.course-card'));
+  const searchInput = document.getElementById('searchInput');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const sortSelect = document.getElementById('sortSelect');
+  const quickLinks = document.querySelectorAll('.quick-link');
+
+  // Helper: Persian to English number conversion for sorting
+  function persianToNumber(str) {
+    return str.replace(/٬/g, '').replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+  }
+
+  // Filter & Sort Function
+  function applyFilters() {
+    let filtered = [...courseCards];
+
+    // 1. Quick Link Filter
+    const activeQuickLink = document.querySelector('.quick-link.active');
+    const quickFilter = activeQuickLink ? activeQuickLink.dataset.filter : 'all';
+    if (quickFilter === 'bestseller') {
+      filtered = filtered.filter(card => card.dataset.popular === 'true');
+    }
+
+    // 2. Category Filter
+    const selectedCategory = categoryFilter.value;
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(card => card.dataset.category === selectedCategory);
+    }
+
+    // 3. Search Filter
+    const searchTerm = searchInput.value.trim().toLowerCase();
+    if (searchTerm) {
+      filtered = filtered.filter(card => {
+        const title = card.querySelector('.course-title').textContent.toLowerCase();
+        const desc = card.querySelector('.course-desc').textContent.toLowerCase();
+        return title.includes(searchTerm) || desc.includes(searchTerm);
+      });
+    }
+
+    // 4. Sorting
+    const sortBy = sortSelect.value;
+    filtered.sort((a, b) => {
+      const aPrice = parseInt(a.dataset.price);
+      const bPrice = parseInt(b.dataset.price);
+      const aDur = parseInt(a.dataset.duration);
+      const bDur = parseInt(b.dataset.duration);
+
+      if (sortBy === 'price-asc') return aPrice - bPrice;
+      if (sortBy === 'price-desc') return bPrice - aPrice;
+      if (sortBy === 'duration-asc') return aDur - bDur;
+      if (sortBy === 'popularity') return (b.dataset.popular === 'true' ? 1 : 0) - (a.dataset.popular === 'true' ? 1 : 0);
+      return 0; // default
+    });
+
+    // Update DOM
+    coursesGrid.innerHTML = '';
+    filtered.forEach(card => coursesGrid.appendChild(card));
+  }
+
+  // Event Listeners
+  searchInput.addEventListener('input', applyFilters);
+  categoryFilter.addEventListener('change', applyFilters);
+  sortSelect.addEventListener('change', applyFilters);
+
+  quickLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      quickLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      applyFilters();
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // هدایت با کلیک روی کارت
+  document.querySelectorAll('.course-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // جلوگیری از کلیک روی دکمه‌ها
+      if (e.target.closest('button')) return;
+      
+      const id = card.dataset.id;
+      if (id) {
+        window.location.href = `shop/course-detail.html?id=${id}`;
+      }
+    });
+    
+    // نشانگر ماوس (cursor pointer) برای کارت
+    card.style.cursor = 'pointer';
+  });
+});
+
+</script>
+
+
+
 </body>
 </html>

@@ -212,11 +212,11 @@
 ========================= */
 .m3-badge--large {
   position: absolute;
-  top: -6px;
+  top: -8px;
   left: -6px;
 
-  min-width: 18px;
-  height: 18px;
+  width: 10px;
+  height: 16px;
   padding: 0 5px;
 
   background: var(--color-error);
@@ -401,4 +401,91 @@
 .m3-text-field input:disabled {
   background: var(--surface-container-high);
   border-color: var(--color-outline-variant);
+}
+
+
+/* =========================
+   🔘 M3 SWITCH – BASE
+========================= */
+
+.m3-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--font-main);
+}
+
+/* مخفی کردن ورودی اصلی */
+.m3-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* ریل سوییچ (Track) */
+.m3-switch-track {
+  width: 52px;
+  height: 32px;
+  background-color: var(--surface-container-highest);
+  border: 2px solid var(--color-outline);
+  border-radius: 999px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+/* دایره سوییچ (Thumb) */
+.m3-switch-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-outline);
+  border-radius: 50%;
+  position: absolute;
+  right: 6px; /* حالت پیش‌فرض (خاموش) در راست برای فارسی */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================================
+   🔘 M3 SWITCH – STATES
+===================================================== */
+
+/* حالت فعال (Checked) */
+.m3-switch input:checked + .m3-switch-track {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.m3-switch input:checked + .m3-switch-track .m3-switch-thumb {
+  background-color: var(--color-on-primary);
+  transform: translateX(-20px); /* حرکت دایره به سمت چپ */
+  width: 24px; /* در متریال ۳ دایره در حالت فعال بزرگتر می‌شود */
+  height: 24px;
+}
+
+/* حالت هوور (Hover) */
+.m3-switch:hover .m3-switch-track {
+  border-color: var(--color-on-surface);
+}
+
+/* حالت فوکوس (Focus) */
+.m3-switch input:focus-visible + .m3-switch-track {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}
+
+/* حالت فشرده (Pressed) */
+.m3-switch:active .m3-switch-thumb {
+  width: 28px;
+}
+
+/* حالت غیرفعال (Disabled) */
+.m3-switch input:disabled + .m3-switch-track {
+  opacity: 0.38;
+  background-color: var(--surface-container-high);
+  border-color: var(--color-outline-variant);
+  cursor: not-allowed;
 }

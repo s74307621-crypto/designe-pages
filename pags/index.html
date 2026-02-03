@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/header.css">
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
     </head>
 
@@ -34,7 +35,10 @@
       <p class="desc">مراقبت‌های ویژه، ونتیلاتور، گازهای خونی، سِداشن و داروهای حیاتی</p>
       <div class="meta">
         <span>سطح: پیشرفته</span>
-        <span>⭐ 4.9</span>
+        <button class="icon-btn like-btn" aria-label="افزودن به علاقه‌مندی">
+  <span class="material-symbols-outlined">favorite</span>
+</button>
+
       </div>
       <div class="price-row">
         <span class="price">3,200,000 تومان</span>
@@ -55,7 +59,10 @@
       <p class="desc">ACLS ،BLS ،CPR، مدیریت تروما، شوک و اورژانس‌های حیاتی</p>
       <div class="meta">
         <span>سطح: متوسط</span>
-        <span>⭐ 4.7</span>
+        <button class="icon-btn like-btn" aria-label="افزودن به علاقه‌مندی">
+  <span class="material-symbols-outlined">favorite</span>
+</button>
+
       </div>
       <div class="price-row">
         <span class="price">2,750,000 تومان</span>
@@ -74,7 +81,10 @@
       <p class="desc">دوزینگ، تداخلات دارویی، نحوه تجویز، و کاربرد داروها در بالین</p>
       <div class="meta">
         <span>سطح: پایه</span>
-        <span>⭐ 4.6</span>
+        <button class="icon-btn like-btn" aria-label="افزودن به علاقه‌مندی">
+  <span class="material-symbols-outlined">favorite</span>
+</button>
+
       </div>
       <div class="price-row">
         <span class="price">1,980,000 تومان</span>
@@ -122,6 +132,12 @@
     .then(data => {
       document.getElementById('headerPlaceholder').innerHTML = data;
     });
+     document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".like-btn");
+    if (!btn) return;
+
+    btn.classList.toggle("liked");
+  });
 </script>
 </body>
 </html>
